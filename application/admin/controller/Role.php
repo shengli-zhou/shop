@@ -4,7 +4,7 @@ use gmars\rbac\Rbac;
 use Request;
 use Db;
 use Session;
-class Permission extends Common
+class Role extends Common
 {
 	public function list()
 	{
@@ -50,7 +50,10 @@ class Permission extends Common
             return json($arr);
         }
         }
-    
+    public function add(){
+      return $this->fetch();
+
+    }
 
       public function addAction()
       {
@@ -97,14 +100,13 @@ class Permission extends Common
       public function deletemore()
       {
        $data=Request::post();
-       $validate = new \app\admin\validate\Delete;
+       $validate = new \app\admin\validatel\Permission;
             if (!$validate->check($data)) {
           $arr=['code'=>1,'status'=>'error', 'data'=>$validate->getError()];
       echo $json=json_encode($arr);
       die;
         }
          $id=Request::post('id');
-         
          if (empty($id)) {
           $arr=['code'=>2,'status'=>'error','data'=>'未选择删除对象'];
           echo json_encode($arr);
