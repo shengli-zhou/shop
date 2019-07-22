@@ -1,13 +1,16 @@
 <?php
 namespace app\admin\controller;
-use gmars\rbac\Rbac;
+
+use Db;
+
 class Index extends Common
 {
     public function index()
     {
-    	$rbac = new Rbac();
+    	
         return $this->fetch();
     }
-
+    
+ 
 }
 

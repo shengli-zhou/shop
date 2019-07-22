@@ -47,7 +47,7 @@
 		</ul>
 	</nav>
 			<nav id="Hui-userbar" class="nav navbar-nav navbar-userbar hidden-xs">
-				<ul class="cl">
+				<ul class="cl" id="user.id">
 					<li>超级管理员</li>
 					<li class="dropDown dropDown_hover"> <a href="#" class="dropDown_A">{$name} <i class="Hui-iconfont">&#xe6d5;</i></a>
 						<ul class="dropDown-menu menu radius box-shadow">
@@ -99,8 +99,11 @@
 			<dd>
 				<ul>
 					<li><a href="{:url('brand/list')}" title="品牌管理">品牌管理</a></li>
-					<li><a href="product-category.html" title="分类管理">分类管理</a></li>
-					<li><a href="product-list.html" title="产品管理">产品管理</a></li>
+					<li><a href="{:url('goodscate/list')}" title="分类管理">分类管理</a></li>
+					<li><a href="{:url('goods/list')}" title="产品管理">产品管理</a></li>
+					<li><a href="{:url('attrdetails/list')}" title="产品管理">属性管理</a></li>
+					<li><a href="{:url('goodsp/list')}" title="货品属性">货品属性</a></li>
+					<li><a href="{:url('order/list')}" title="货品属性">订单管理</a></li>
 		</ul>
 	</dd>
 </dl>
